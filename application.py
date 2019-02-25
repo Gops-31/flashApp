@@ -11,7 +11,12 @@ def func():
     cursor = cnxn.cursor()
 
     res = cursor.execute("SELECT * FROM uni")
+    op = []
+    for row in res:
+        op.append(list(row))
+    
+  
 
-    return(jsonify(res))
+    return jsonify(op)
 
 app.run()
