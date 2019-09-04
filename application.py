@@ -1,23 +1,13 @@
-from flask import Flask, render_template, request
-from flask import jsonify
-import json
-#import pyodbc
+from flask import Flask
 
 app = Flask(__name__)
 
-@app.route('/',)
+
+@app.route('/')
 def func():
-    #cnxn = pyodbc.connect('Driver={ODBC Driver 17 for SQL Server};Server=tcp:tataatsu-server.database.windows.net,1433;Database=tataatsu-database;Uid=tataatsuadmin@tataatsu-server;Pwd=Database@123;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=200;')
-    #cursor = cnxn.cursor()
-
-    #res = cursor.execute("SELECT * FROM uni")
-    #op = []
-    #for row in res:
-    #    op.append(list(row))
+    # returning hello text
     return "hello"
-    
-  
- 
-   # return jsonify(op)
 
+
+# calling main method to run
 app.run()
